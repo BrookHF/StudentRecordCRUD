@@ -46,6 +46,7 @@ Name | Type | Description
 --- | --- | ---
 StudentID | Number | foreign key to student
 CourseId | Number | foreign key to Course
+CourseName | String | course's name add this redundency to improve performance by avoid join
 
 ## Frontend
 
@@ -55,6 +56,8 @@ Support features
 1. Update a student record: A form to add a class to student
 1. Delete a student record: A buttom to delete student and a buttom to remove student's course
 1. Find and display students along with student's enrolled courses: A form to search students by name, display student and student's course use a card
+
+component: student Card, 
 
 ## Backend
 
