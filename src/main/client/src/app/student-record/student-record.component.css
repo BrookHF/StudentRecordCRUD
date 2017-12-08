@@ -1,12 +1,13 @@
 .student-card {
   width: 450px;
+  margin-bottom: 10px;
 }
 
 .delete-student {
   float: right;
 }
 
-.save-student {
+.add-course {
   margin-top: 25px;
   float: right;
 }

@@ -1,8 +1,7 @@
-<h1>
+<h1 class="app-title">
   {{title}}
 </h1>
 
-<app-student-record *ngFor="let student of students"
+<app-student-record *ngFor="let student of students" class="student-record-card" (deleteStudentEvent)="deleteStudent($event)"
   [student]=student>
 </app-student-record>
-

@@ -1,0 +1,9 @@
+.student-record-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-title {
+  text-align: center;
+}
