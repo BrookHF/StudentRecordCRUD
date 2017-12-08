@@ -4,6 +4,18 @@ This web application support managing a student record. The goal is to present o
 
 Build with Angular 2 as front end, and Spring Boot as backend.
 
+## Try out
+
+``` bash
+
+git clone https://github.com/BrookHF/StudentRecordCRUD.git
+
+cd StudentRecordCRUD/src/main/client
+
+ng serve
+
+```
+
 ## Requirement
 
 Project : Implement CRUD ( Create, Read, Update and Delete) using following tech stack.
@@ -38,15 +50,8 @@ StudentName| String | Student's name
 Name | Type | Description
 --- | --- | ---
 CourseId | Number | Primary Id
-CourseName| String | course's name
-
-### Enrollment
-
-Name | Type | Description
---- | --- | ---
 StudentID | Number | foreign key to student
-CourseId | Number | foreign key to Course
-CourseName | String | course's name add this redundency to improve performance by avoid join
+CourseName| String | course's name
 
 ## Frontend
 
@@ -57,8 +62,6 @@ Support features
 1. Delete a student record: A buttom to delete student and a buttom to remove student's course
 1. Find and display students along with student's enrolled courses: A form to search students by name, display student and student's course use a card
 
-component: student Card, 
-
 ## Backend
 
 Use Spring Data as data access layer, MySQL as data Store.
@@ -67,11 +70,9 @@ Use Spring Data as data access layer, MySQL as data Store.
 
 Name | url | Verb | Description
 --- | --- | --- | ---
-addStudent | /student | Post | Create a new student
+addStudent | /student | Post | Create a new student with name
 searchStudentByName | /student | get | Search students by thier name
 deleteStudent | /student | delete | Delete student along with all thier enrollment
-addCourseToStudent | /enrollment | Post | Add a enrollment to student
-getEnrollment | /enrollment | get | Get student's course by student Id
-deleteEnrollment | /enrollment | delete | Delete enrollment
-addCourse | /course | post | Add a course
-getCourseByName | /course | get | Get a course's Id by name
+addCourseToStudent | /course | Post | Add a enrollment to student
+getCourseByStudent | /enrollment | get | Get student's course by student Id
+deleteourseByStudent | /enrollment | delete | Delete student's class
