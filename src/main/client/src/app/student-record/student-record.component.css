@@ -1,0 +1,20 @@
+.student-card {
+  width: 450px;
+}
+
+.delete-student {
+  float: right;
+}
+
+.save-student {
+  margin-top: 25px;
+  float: right;
+}
+
+.student-course-title {
+  padding-right: 10px;
+}
+
+.course-chip {
+  margin-bottom: 3px;
+}

@@ -1,0 +1,24 @@
+<mat-card class="student-card">
+  <button mat-icon-button class="delete-student" (click)="deleteStudent(student)">
+    X
+  </button>
+  <mat-card-title>Name: {{student.name}}</mat-card-title>
+  <mat-card-content>
+    <mat-chip-list #chipList>
+      <span class="student-course-title">
+        Courses:
+      </span> 
+      <mat-chip *ngFor="let course of student.courses" class="course-chip" [selectable]="selectable" [removable]="removable" (remove)="remove(course)">
+        {{course.name}}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+  <mat-form-field class="demo-chip-list">
+    <input matInput placeholder="New Course..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)" />
+  </mat-form-field>
+  <button mat-button class="save-student" (click)="saveStudent(student)">
+    Save
+  </button>
+</mat-card>

@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule  } from '@angular/forms';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatCardModule, MatListModule, MatGridListModule, MatChipsModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatIconModule, MatCardModule, MatListModule, MatChipsModule } from '@angular/material';
 
-/* custom components */
-import { StudentRecordComponent } from './student-record/student-record.component';
 
 @NgModule({
   imports: [
@@ -14,15 +12,12 @@ import { StudentRecordComponent } from './student-record/student-record.componen
     /* 3rd party components */
     MatInputModule,
     MatButtonModule,
-    MatSelectModule,
     MatIconModule,
     MatCardModule,
-    MatGridListModule,
     MatListModule,
     MatChipsModule
   ],
   declarations: [
-    StudentRecordComponent
   ],
   exports: [
     CommonModule,
@@ -31,14 +26,10 @@ import { StudentRecordComponent } from './student-record/student-record.componen
     /* 3rd party components */
     MatInputModule,
     MatButtonModule,
-    MatSelectModule,
     MatIconModule,
     MatCardModule,
     MatListModule,
-    MatGridListModule,
-    MatChipsModule,
-
-    StudentRecordComponent
-  ]
+    MatChipsModule
+  ],
 })
 export class SharedModule { }

@@ -2,5 +2,7 @@
   {{title}}
 </h1>
 
-<student-record></student-record>
+<app-student-record *ngFor="let student of students"
+  [student]=student>
+</app-student-record>
 
